@@ -1,6 +1,12 @@
 name: Python Package using Conda
 
-on: [push]
+on:
+  push:
+    branches:
+      - dadamsncsa-patch-1
+  pull_request:
+    branches:
+      - dadamsncsa-patch-1
 
 jobs:
   build-linux:

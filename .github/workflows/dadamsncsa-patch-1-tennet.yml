@@ -35,11 +35,11 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file ".conda/env.yml" --name base
-        # Install c3 CLI tool
-    
-    - name: Deploy to tag
-      run: |
         wget https://"$VANITY_URL"/static/nodejs-apps/cli/cli.tar.gz
         tar -xzf cli.tar.gz
         ./c3 install
+    
+    - name: Deploy to tag
+      run: |
+        echo "$VANITY_URL"
         

@@ -1,14 +1,12 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
+name: C3 Problem Report
+description: File a report for problem encountered useing C3 DTI resources.
+title: "[C3 Bug]: "
 labels: [bug, triage]
-assignees:
-  - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this problem report!
   - type: input
     id: vanityurl
     attributes:
@@ -21,22 +19,24 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: 'Provide details on what is happening and what did you expect to happen?  
+      This field supports drag-n-drop of images.  
+      Please provide as much detail as possible.' 
       placeholder: Tell us what you see!
       value: "A bug happened!"
     validations:
       required: true
-  - type: dropdown
+  - type: checkboxes
     id: resources
     attributes:
       label: C3 Resources
       description: Select one or more c3 resources that are affected.
       options:
-        - C3 Static Console
-        - C3 Jupyter
-        - C3 Ex Machina
-        - C3 Developer Portal
-        - C3 Okta Authentication
+        - label: C3 Static Console
+        - label: C3 Jupyter
+        - label: C3 Ex Machina
+        - label: C3 Developer Portal
+        - label: C3 Okta Authentication
     validations:
       required: true
   

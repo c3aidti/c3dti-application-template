@@ -10,13 +10,13 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: vanityurl
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: C3 Vanity URL
+      description: Please enter the relevant C3 vanity url. 
+      placeholder: https://mytag-mytenant.c3dti.ai
     validations:
-      required: false
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -27,36 +27,23 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: resources
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: C3 Resources
+      description: Select one or more c3 resources that are affected.
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - C3 Static Console
+        - C3 Jupyter
+        - C3 Ex Machina
+        - C3 Developer Portal
+        - C3 Okta Authentication
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+  
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+  

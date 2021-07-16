@@ -1,4 +1,4 @@
-name: C3 Problem Report
+name: C3 Resources Problem Report
 description: File a report for problem encountered useing C3 DTI resources.
 title: "[C3 Bug]: "
 labels: [bug, triage]

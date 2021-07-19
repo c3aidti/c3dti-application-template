@@ -1,6 +1,6 @@
-name: C3 Resources Problem Report
-description: File a report for problem encountered useing C3 DTI resources.
-title: "[C3 Bug]: "
+name: DTI Resources Problem Report
+description: File a report for problem encountered while using DTI awarded resources.
+#title: "[Bug]: "
 labels: [bug, triage]
 body:
   - type: markdown
@@ -10,8 +10,8 @@ body:
   - type: input
     id: vanityurl
     attributes:
-      label: C3 Vanity URL
-      description: Please enter the relevant C3 vanity url. 
+      label: Affected URL
+      description: Please enter the relevant url associated with this issue. 
       placeholder: https://mytag-mytenant.c3dti.ai
     validations:
       required: true
@@ -29,16 +29,18 @@ body:
   - type: checkboxes
     id: resources
     attributes:
-      label: C3 Resources
-      description: Select one or more c3 resources that are affected.
+      label: Affected Resources
+      description: Select one or more affected resources.
       options:
         - label: C3 Static Console
         - label: C3 Jupyter
         - label: C3 Ex Machina
         - label: C3 Developer Portal
         - label: C3 Okta Authentication
+          label: Azure subscription
+          label: HPC allocation
     validations:
-      required: true
+      required: False
   
   - type: textarea
     id: logs
